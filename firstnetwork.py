@@ -2,7 +2,7 @@
 
 weight = 0.1 # arbitrary value for the slope
 learning_rate = 0.1
-bias = 0.3 # arbitrary value for the bias for testing. Use random values for real
+bias = 0.1 # arbitrary value for the bias for testing. Use random values for real
 
 inputs = [1, 2, 3, 4,]
 targets = [12, 14, 16, 18,]
@@ -18,7 +18,7 @@ weights = []
 costs = []
 epochs = 30 # number of times to train the network (iterations)
 
-for i in range(epochs):
+for _ in range(epochs):
     pred = [predict(i) for i in inputs] # predict the output for each input and store in pred array
     errors = [(targets[i] - pred[i]) ** 2 for i in range(len(targets))] # calculate the error for each input and store in errors array
     cost = sum(errors) / len(targets) # calculate the cost of the network (indicates how well the network is performing)
